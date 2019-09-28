@@ -1,0 +1,67 @@
+
+<div class="topnav" id="myTopnav">
+    
+    
+  <a routerLink="/"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Cognizant_logo.svg/787px-Cognizant_logo.svg.png" alt="Image cannot be displayed!" width="80"></a>
+  <a routerLink="/">Home</a>
+  <a routerLink="/contacts">Contact</a>
+  <a routerLink="/about">About</a>
+  <a routerLink="/course">Courses</a>
+  <div class="dropdown">
+    <button *ngIf="!show" class="dropbtn">Login As 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="/studentLogIn">Student</a>
+      <a routerLink="/mentorLogIn">Mentor</a>
+      <a routerLink="/adminLogIn">Admin</a>
+      
+    </div>
+  </div>
+  <div class="dropdown">
+    <button *ngIf="!show" class="dropbtn">Register 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="/studentSignUp">As Student</a>
+      <a routerLink="/mentorsignup">As Mentor</a>
+      
+    </div>
+  </div>
+
+  <a *ngIf="show" onclick="location.reload();" routerLink="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+  
+  
+  <!-- <div class="dropdown">
+    <button class="dropbtn" style="margin-right: 380px">Courses 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#" routerLink="/java">Java Full Stack</a>
+      <a href="#" routerLink="/meanstack">MEAN Stack</a>
+      <a href="#" routerLink="/asp">ASP.NET MVC</a>
+      <a href="#" routerLink="/mern">MERN</a>
+    </div>  
+  </div> 
+  <a href="#course" routerLink="/course">Course</a> -->
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  <!-- <a href="#"><form action="/action_page.php">
+    <input type="text" placeholder="Search.." name="search" style="border-radius: 15px; margin-right: 10px; width: 70%; height: 120%;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form></a> -->
+  <div id="div2">
+  <input type="text" placeholder="Search.." name="search" style="margin-right: 10px;border-radius: 5px;">
+  <button type="submit"><i class="fa fa-search" style="
+    font-size: 17px;
+    cursor: pointer;"></i></button>
+</div>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <form class="form-signin" (ngSubmit)="submit_form_data(f.value)" #f="ngForm">
+        <p align="right"><a routerLink="/"  class="close" data-dismiss="alert" aria-label="close"><i class="fa fa-window-close fa-2x" style="color:red" aria-hidden="true"></i></a> </p>       
+        <h2 class="form-signin-heading"> <i class="fa fa-user-o" aria-hidden="true" style="margin-right: 15px"></i>Enter Credentials:</h2>
+      
+      <input required minlength="6" ngModel name="password" #password="ngModel" type="password" class="form-control" placeholder="Password" required=""/>  
+      <div style="color: red" *ngIf="(f.submitted || (password.touched || password.dirty)) && !password.valid">
+        <div *ngIf="password.errors.required">Password is required!</div>
+        <div *ngIf="password.errors.minlength">Password must be atleast 6 characters!</div>  
+      </div>        
+      <label class="checkbox">
+      </label>
+      <button [disabled]="!f.form.valid" class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      <p></p>
+      <div>
+        <h3 style="color: red">{{error_message}}</h3>
+      </div>   
+    </form>
+  </div>
